@@ -11,3 +11,8 @@ Using existing resources efficiently and cost-effectively is crucial to increase
 **Create a Data Pipeline for analyst and forcast**   In  order to send cryptocurrency price data to a data warehouse and analyze it from a business perspective, while keeping costs to a minimum.
 
  ![image](https://github.com/mphothanachai/Project_Data_pipeline/assets/137395742/6c9cec96-68af-4346-95c7-aad194a3312a)
+
+## 3.Design
+
+Let design **ETL pipeline**
+![image](https://github.com/mphothanachai/Project_Data_pipeline/assets/137395742/b9f6c415-1e8c-4741-a838-930757eb6a08)
