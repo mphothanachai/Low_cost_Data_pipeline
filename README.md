@@ -8,6 +8,6 @@ Using existing resources efficiently and cost-effectively is crucial to increase
 
 
 ## 2.Objective
-**Create a Data Pipeline for Data analyst**   In  order to send cryptocurrency price data to a data warehouse and analyze it from a business perspective, while keeping costs to a minimum.
+**Create a Data Pipeline for analyst and forcast**   In  order to send cryptocurrency price data to a data warehouse and analyze it from a business perspective, while keeping costs to a minimum.
 
  ![image](https://github.com/mphothanachai/Project_Data_pipeline/assets/137395742/6c9cec96-68af-4346-95c7-aad194a3312a)
