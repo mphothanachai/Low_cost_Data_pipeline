@@ -44,3 +44,43 @@ I Will create 3 table (Btc, Eth, Doge).
 ![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/337db957-0a7a-4655-95e6-3059309d649e)
 3. Add environment variable for save all credentials
 ![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/93370739-98ed-4165-8ecd-7b6accad7705)
+4. choose python => main.py (put your code) => requirements.txt (package) => entry point (main function)
+![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/e119cda6-2dfe-4ca5-b18f-8b26b8b6f137)
+5. I choose to explain the code briefly because it's quite similar. It starts by creating a class to fetch values from environment variables. The first function, `get_data_btc`, retrieves data from `btc_url` using the `requests` library and converts it to JSON. The next function, `btc_insert_data`, takes the retrieved data and inserts it into BigQuery, referencing the `btc_dataset_id` and the record.
+```
+import base64
+import datetime
+import os
+import requests
+from google.cloud import bigquery
+
+  
+class Config:
+	dataset_id = os.environ.get("dataset_id")
+	table_name = os.environ.get("table_name")
+	btc_url = os.environ.get("btc_url")
+	eth_url = os.environ.get("eth_url")
+	doge_url = os.environ.get("doge_url")
+
+def get_data_btc(url: str) -> dict:
+response = requests.get(btc_url)
+return response.json()
+
+def btc_insert_data(event, context):
+	client = bigquery.Client()
+	dataset_ref = client.dataset(Config.btc_dataset_id)
+
+	raw = get_data(Config.btc_url)
+	record = [(
+		raw["time"]["updatedISO"],
+		raw["bpi"]["THB"]["rate_float"],
+		raw["bpi"]["USD"]["rate_float"]
+		)]
+	table_ref = dataset_ref.table(Config.btc_table_name)
+	table = client.get_table(table_ref)
+	result = client.insert_rows(table, record)
+	return result
+```
+## 7. Cloud Scheduler
+Create cron job => target (pub/sub) => topic
+![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/58431a1a-7f80-404c-9717-93b02aed3127)
