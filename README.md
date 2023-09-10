@@ -16,3 +16,12 @@ Using existing resources efficiently and cost-effectively is crucial to increase
 
 Let design **ETL pipeline**
 ![image](https://github.com/mphothanachai/Project_Data_pipeline/assets/137395742/b9f6c415-1e8c-4741-a838-930757eb6a08)
+
+## 4. Prepare (before use service on gcp)
+
+1.  Account  [Google cloud platfrom](https://console.cloud.google.com/)  (gcp) if you have it you can use service on gcp (Cloud Functions , Cloud Scheduler , Pub/Sub , BigQuery).
+2.  Cloud Functions (you can run code on cloud Python , Node.js , Go , Java).
+3.  Cloud Scheduler (For scheduling commands (jobs) that are similar to cron jobs.).
+4.  Google Cloud Pub/Sub (Used to send data to run a function at the scheduled cron time.).
+5. BigQuery (Use for store data)
+6. Looker studio (Dashboard)
