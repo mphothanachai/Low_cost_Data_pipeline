@@ -35,3 +35,12 @@ Let design **pipeline**
 And then setup schema for support data
 ![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/e9381b50-767a-4b04-9a86-7b1fc4552050)
 I Will create 3 table (Btc, Eth, Doge).
+
+## 6. Cloud Functions
+1. Create function => Trigger (Pub/Sub) => environment variables (keep credential)
+![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/7722e602-44eb-4211-82c3-394903fa662c)
+
+2. Add Trigger => Create topic
+![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/337db957-0a7a-4655-95e6-3059309d649e)
+3. Add environment variable for save all credentials
+![image](https://github.com/mphothanachai/Low_cost_Data_pipeline/assets/137395742/93370739-98ed-4165-8ecd-7b6accad7705)
